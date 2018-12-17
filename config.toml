@@ -1,62 +1,60 @@
-baseURL = "https://radlerhalle.de"
+# Site settings
+baseURL = "https://www.radlerhalle.de"
 languageCode = "de-de"
-title = "Radlerhalle"
-theme = "hermit"
-# enableGitInfo = true
-pygmentsCodefences  = true
-pygmentsUseClasses  = true
-hasCJKLanguage = true  # If there're Chinese/Japanese/Korean Languages in the content, enable this.
-rssLimit = 10  # Maximum number of items in the RSS feed.
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
-enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/functions/emojify/
-# googleAnalytics = "UA-123-45"
-# disqusShortname = "yourdiscussshortname"
+title = "Split - HTML Template Demo"
+theme = "hugo-split-theme"
+disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap"]
 
-[author]
-  name = "Martin Hauge, Yuji Kimura, Sebastian Lindler"
-
-[blackfriday]
-  hrefTargetBlank = true
-
-[taxonomies]
-  tag = "tags"
-  category = ""  # Categories are disabled by default.
+# Copyright
+copyright = "&copy;2018 Martin Hauge, Yuji Kimura, Sebastian Lindler"
 
 [params]
-  dateform        = "Jan 2, 2006"
-  dateformShort   = "Jan 2"
-  dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04 -0700"
 
-  # themeColor = "#494f5c"  # Theme color in meta tags.
-  homeSubtitle = "Radlerhalle in Karlsruhe"
-  footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-  # gitUrl = "https://github.com/Someone/SomeRepo/commit/" # Prefix of link to the git commit detail page. GitInfo must be enabled.
-  justifyContent = false  # Set "text-align: justify" to .content, requires extended version of Hugo
-  bgImg = "radlerhalle.jpg"  #  Homepage background-image URL
+  # Metadata for search engines and social sharing
+  author = "Martin Hauge, Yuji Kimura, Sebastian Lindler"
+  description = "Radlerhalle in Karlsruhe"
 
-  # Social Icons
-  # Check https://github.com/Track3/hermit#social-icons for more info.
-  #[[params.social]]
-  #  name = "twitter"
-  #  url = "https://twitter.com/"
+  # Favicon
+  favicon = "favicon.ico"
 
-  #[[params.social]]
-  #  name = "instagram"
-  #  url = "https://instagram.com/"
+  # Section - Visual
+  [params.visual]
 
-  #[[params.social]]
-  #  name = "github"
-  #  url = "https://github.com/"
+    # Image
+    [params.visual.image]
+      enable = true
+      file = "radlerhalle.jpg"
+      position = "center center"
 
-[menu]
+    # Video
+    [params.visual.video]
+      enable = false
+      mute = true
+      file = "videos/background.mp4"
+      # youtubeId = "dk9uNWPP7EA"
 
-  [[menu.main]]
-    name = "Posts"
-    url = "/posts/"
-    weight = 10
+  # Links
+  #
+  # Links List #1
+  [[params.links]]
+    [params.links.list1]
+      heading = "Hier gehts weiter.."
 
-  [[menu.main]]
-    name = "About"
-    url = "/about-hugo/"
-    weight = 20
+      [[params.links.list1.link]]
+        text = "SeLi Rahmenbau"
+        url = "https://seli-rahmenbau.de"
+
+      [[params.links.list1.link]]
+        text = "klovesradeln"
+        url = "http://klovesradeln.de"
+
+      [[params.links.list1.link]]
+        text = "Radler Martin"
+        url = "http://radlermartin.de"
+
+
+  # The original template is released under the Creative Commons Attribution 3.0 License.
+  # Please keep the original attribution link when using for your own project.
+  # If you'd like to use the template without the attribution, you can check out
+  # the license option via the template author's website: https://onepagelove.com/split
+
